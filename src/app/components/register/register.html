@@ -1,0 +1,19 @@
+<article class="component-wrapper">
+	<div class="container">
+		<h1>Registration</h1>
+		<form (submit)="addUser()" #f="ngForm">
+			<div class="form-group">
+				<label>Name
+					<input type="text" class="form-control"
+							[(ngModel)]="model.userName" name="userName" required>
+				</label>
+			</div>
+			<div class="form-group">
+				<label>E-mail
+					<input type="email" class="form-control"
+							[(ngModel)]="model.userEmail" name="useEmail" required></label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</article>

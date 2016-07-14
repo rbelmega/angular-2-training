@@ -1,0 +1,29 @@
+<article class="component-wrapper">
+	<h1 class="text-center">AngularJS training</h1>
+
+	<article class="component-wrapper">
+		<article>
+			<p>One way binding</p>
+			<input type='text' placeholder="Enter shipping address"
+					[ngModel]="shippingAddress1"/>
+			<button (click)="shippingAddress1='123 Main Street'">Set Default Address</button>
+			<p>The shipping address is {{shippingAddress1}}</p>
+		</article>
+
+		<article>
+			<p>Two way binding</p>
+			<input type='text' placeholder="Enter shipping address"
+					[(ngModel)]="shippingAddress"/>
+			<button (click)="shippingAddress='123 Main Street'">Set Default Address</button>
+			<p>The shipping address is {{shippingAddress}}</p>
+		</article>
+
+	</article>
+
+	<router-outlet></router-outlet>
+
+	<article class="wrapper">
+		<register class="col"></register>
+		<user class="col"></user>
+	</article>
+</article>
